@@ -67,5 +67,15 @@ public class Zoo {
         }
         return winner;
     }
+
+    public Swimable getWinnerSwim() {
+        List<Swimable> swimanimals = getSwimable();
+        Swimable winner = swimanimals.get(0);
+        for (Swimable item : swimanimals) {
+            if (winner.speedOfSwim() < item.speedOfSwim()) {
+                winner = item;
+            }
+        }
+        return winner;
 }
 
