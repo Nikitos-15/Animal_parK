@@ -10,7 +10,8 @@ public class Main {
                 new Rabbit("Whik"),
                 new Cow("Murrka"),
                 new Duck("Duck"),
-                new Butterfly("Yello")));
+                new Butterfly("Yello"),
+                new Fish("Nemo")));
         for (Sayable item : zoopark.getSayAble()){
             System.out.println(item.say());
         }
@@ -22,6 +23,10 @@ public class Main {
         for (Flyable item : zoopark.getFlyable()){
             System.out.println(item);
         }
+        System.out.println("                                    ");
+        for (Swimable item : zoopark.getSwimable()){
+            System.out.println(item);
+        }
 
         System.out.println(                                  );
 
@@ -30,5 +35,9 @@ public class Main {
         System.out.println(                                  );
 
         System.out.println(zoopark.getWinnerFLy());
+
+        System.out.println(                                  );
+
+        System.out.println(zoopark.getWinnerSwim());
     }
 }

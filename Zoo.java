@@ -47,6 +47,15 @@ public class Zoo {
         }
         return result;
     }
+    public List<Swimable> getSwimable(){
+        List<Swimable> result = new ArrayList<>();
+        for (Animal  item : animals ){
+            if (item instanceof Swimable){
+                result.add((Swimable) item);
+            }
+        }
+        return result;
+    }
     public Runable getWinner(){
         List<Runable> runanimals= getRunable();
         Runable winner = runanimals.get(0);
@@ -77,5 +86,6 @@ public class Zoo {
             }
         }
         return winner;
+}
 }
 
